@@ -31,13 +31,13 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>SaveFlitesServlet</display-name>
-    <servlet-name>SaveFlitesServlet</servlet-name>
-    <servlet-class>com.fly_away.servlets.SaveFlitesServlet</servlet-class>
+    <display-name>SaveFlightsServlet</display-name>
+    <servlet-name>SaveFlightsServlet</servlet-name>
+    <servlet-class>com.fly_away.servlets.SaveFlightsServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>SaveFlitesServlet</servlet-name>
-    <url-pattern>/SaveFlitesServlet</url-pattern>
+    <servlet-name>SaveFlightsServlet</servlet-name>
+    <url-pattern>/SaveFlightsServlet</url-pattern>
   </servlet-mapping>
   
 </web-app>

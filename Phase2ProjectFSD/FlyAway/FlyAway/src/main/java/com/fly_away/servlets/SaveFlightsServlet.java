@@ -11,12 +11,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
-import com.fly_away.dao.FlitesDao;
-import com.fly_away.entities.Flites;
+import com.fly_away.dao.FlightsDao;
+import com.fly_away.entities.Flights;
 import com.fly_away.helper.ConnectionProvider;
 
 
-public class SaveFlitesServlet extends HttpServlet {
+public class SaveFlightsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,18 +33,18 @@ public class SaveFlitesServlet extends HttpServlet {
 			String date = request.getParameter("date");
 			
 			
-			Flites f = new Flites(source,destination,airline,ticket,date);
+			Flights f = new Flights(source,destination,airline,ticket,date);
 			
-			FlitesDao dao = new FlitesDao(ConnectionProvider.getConnection());
+			FlightsDao dao = new FlightsDao(ConnectionProvider.getConnection());
 			
-			if(dao.saveFlites(f)) {
-				RequestDispatcher rd=request.getRequestDispatcher("/saveFlites.jsp");  
+			if(dao.saveFlights(f)) {
+				RequestDispatcher rd=request.getRequestDispatcher("/saveFlights.jsp");  
 			     rd.include(request, response); 
 				out.println("<h1 style='text-align:center;color:green;margin-top: 10px;'> Details successfully saved in Database...</h1>");
 				
 			}else {
 				
-				RequestDispatcher rd=request.getRequestDispatcher("/saveFlites.jsp");  
+				RequestDispatcher rd=request.getRequestDispatcher("/saveFlights.jsp");  
 			     rd.include(request, response); 
 				out.println("<h1 style='text-align:center;color:red;margin-top: 10px;'> Error !!! Something went wrong...</h1>");
 				

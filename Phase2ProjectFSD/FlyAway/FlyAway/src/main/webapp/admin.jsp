@@ -44,7 +44,7 @@
 				</li>
 				<li class="nav-item"><a class="nav-link" href="#"><span
 						class="fa fa-paper-plane-o"></span> Master list of airlines</a></li>
-				<li class="nav-item"><a class="nav-link" href="saveFlites.jsp"><span
+				<li class="nav-item"><a class="nav-link" href="saveFlights.jsp"><span
 						class="fa fa-server"></span> Save Flight Details</a></li>
 				<li class="nav-item"><a class="nav-link" href="contactUs.jsp"><span
 						class="fa fa-address-card-o"></span> Contact us</a></li>
