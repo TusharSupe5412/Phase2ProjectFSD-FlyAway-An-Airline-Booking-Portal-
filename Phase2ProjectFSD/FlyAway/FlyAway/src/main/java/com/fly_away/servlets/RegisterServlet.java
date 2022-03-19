@@ -1,5 +1,6 @@
 package com.fly_away.servlets;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -36,15 +37,18 @@ public class RegisterServlet extends HttpServlet {
 		User user= new User(name,email,password,gender,role);
 		
 		
-					//			Create UsrDao Object
+					//			Create UserDao Object
 		
 		UserDao dao = new UserDao(ConnectionProvider.getConnection());
 		if(dao.saveUser(user)) {
-			response.sendRedirect("login.jsp");  
-			out.println("<h1 style='text-align:center;color:green;margin-top: 100px;'> Sucessfully Registerd!!! click on login to book your ticket...</h1>");
+			 RequestDispatcher rd=request.getRequestDispatcher("/login.jsp");  
+		     rd.include(request, response); 
+			out.println("<h1 style='text-align:center;color:green;margin-top: 100px;'> Sucessfully Registerd!!! login to book your ticket...</h1>");
 			
 		}else {
-			out.println("<h1 style='text-align:center;color:red;margin-top: 100px; '> Error!!! Something went wrong...</h1>");
+			RequestDispatcher rd=request.getRequestDispatcher("/register.jsp");  
+		     rd.include(request, response); 
+			out.println("<h1 style='text-align:center;color:red;margin-top: 40px; '> Error!!! Something went wrong...</h1>");
 		}
 	}
 

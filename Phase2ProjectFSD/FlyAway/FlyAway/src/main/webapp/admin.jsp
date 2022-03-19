@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ page import="com.fly_away.entities.*" %>
+	<%@ page import="com.fly_away.dao.*" %>
+	<%@ page import="com.fly_away.helper.*" %>
+	<%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,13 +20,13 @@
 </head>
 <body>
 
-	<!-- Navbar starts here -->
+
 
 	<!-- Navbar starts here -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark primary-background">
 		<a class="navbar-brand" href="index.jsp"><span
-			class="fa fa-asterisk"></span> FlyAway</a>
+			class="fa fa-plane"></span> FlyAway</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -40,9 +44,9 @@
 				</li>
 				<li class="nav-item"><a class="nav-link" href="#"><span
 						class="fa fa-paper-plane-o"></span> Master list of airlines</a></li>
-				<li class="nav-item"><a class="nav-link" href="#"><span
-						class="fa fa-server"></span> Master list of Source and Destination</a></li>
-				<li class="nav-item"><a class="nav-link" href="#"><span
+				<li class="nav-item"><a class="nav-link" href="saveFlites.jsp"><span
+						class="fa fa-server"></span> Save Flight Details</a></li>
+				<li class="nav-item"><a class="nav-link" href="contactUs.jsp"><span
 						class="fa fa-address-card-o"></span> Contact us</a></li>
 
 			</ul>

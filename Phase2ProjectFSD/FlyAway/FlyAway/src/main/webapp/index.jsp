@@ -17,7 +17,7 @@ body{
 						background-repeat: no-repeat;
 					    background-attachment: fixed;
 					    background-size: cover;
-						background-image: url('img/background.jpg');
+						background-image: url('img/plane.jpg');
 }
 
 
@@ -58,7 +58,7 @@ body{
 								<h3>Source  <span class="fa fa-exchange"></span>  Destination</h3>
 							</div>
 							<div class="card-body">
-							      <form id="reg-form" action="SearchServlet" method="post">
+							      <form id="reg-form" action="SearchServlet" method="get">
 							      
 							      <div class="form-group">
 								    <label for="user_source">Source</label>
@@ -69,13 +69,13 @@ body{
 								  <div class="form-group">
 								    <label for="destination">Destination</label>
 								    <input name="user_destination" type="text" class="form-control" id="user_destination" aria-describedby="emailHelp" placeholder="Enter your destination here">
-								    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+								    
 								  </div>
 								  
 								  
 								  <div class="form-group">
-								    <label for="exampleInputPassword1">Date of journy</label>
-								    <input name="user_password" type="date" class="form-control" id="date" placeholder="Select date">
+								    <label for="date">Date of journy</label>
+								    <input name="date" type="date" class="form-control" id="date" placeholder="Select date">
 								  </div>
 								  
 								  

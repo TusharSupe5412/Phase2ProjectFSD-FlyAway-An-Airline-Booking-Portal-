@@ -20,7 +20,7 @@
 						background-repeat: no-repeat;
 					    background-attachment: fixed;
 					    background-size: cover;
-						background-image: url('img/background.jpg');
+						background-image: url('img/plane.jpg');
 }
 
 </style>

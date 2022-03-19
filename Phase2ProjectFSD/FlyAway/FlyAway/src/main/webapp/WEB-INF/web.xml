@@ -29,5 +29,15 @@
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SaveFlitesServlet</display-name>
+    <servlet-name>SaveFlitesServlet</servlet-name>
+    <servlet-class>com.fly_away.servlets.SaveFlitesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SaveFlitesServlet</servlet-name>
+    <url-pattern>/SaveFlitesServlet</url-pattern>
+  </servlet-mapping>
   
 </web-app>
