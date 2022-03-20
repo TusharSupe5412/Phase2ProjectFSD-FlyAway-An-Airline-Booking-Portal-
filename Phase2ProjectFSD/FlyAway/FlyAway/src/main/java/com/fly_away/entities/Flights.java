@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Flights {
 
-	private int id;
+	private int fid;
 	private String source;
 	private String destination;
 	private String airline;
@@ -12,9 +12,9 @@ public class Flights {
 	private String fdate;
 	
 	
-	public Flights(int id, String source, String destination, String airline, String ticket, String fdate) {
+	public Flights(int fid, String source, String destination, String airline, String ticket, String fdate) {
 		super();
-		this.id = id;
+		this.fid = fid;
 		this.source = source;
 		this.destination = destination;
 		this.airline = airline;
@@ -42,20 +42,24 @@ public class Flights {
 							//	Getters and Setters
 
 
-	public int getId() {
-		return id;
+	
+
+
+	
+
+
+	public int getFid() {
+		return fid;
 	}
 
 
-	public void setId(int id) {
-		this.id = id;
+	public void setFid(int fid) {
+		this.fid = fid;
 	}
-
 
 	public String getSource() {
 		return source;
 	}
-
 
 	public void setSource(String source) {
 		this.source = source;

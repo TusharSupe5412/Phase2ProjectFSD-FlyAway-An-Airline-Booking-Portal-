@@ -1,5 +1,6 @@
 package com.fly_away.servlets;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -39,16 +40,23 @@ public class LoginServlet extends HttpServlet {
 			
 			
 		}else {
-			HttpSession s = request.getSession();
-			s.setAttribute("currentUser", u);
+//			HttpSession s = request.getSession();
+//			s.setAttribute("currentUser", u);
 			
 			if(u.getRole().equals("admin")) {
 			
-				response.sendRedirect("admin.jsp");
-			
+				RequestDispatcher rd=request.getRequestDispatcher("admin.jsp");  
+			    rd.forward(request, response);
+//				response.sendRedirect("admin.jsp");
+				HttpSession s = request.getSession();
+				s.setAttribute("currentUser", u);
 			}else {
 				
-				response.sendRedirect("user.jsp");
+				RequestDispatcher rd=request.getRequestDispatcher("user.jsp");  
+			    rd.forward(request, response);
+//				response.sendRedirect("user.jsp");
+				HttpSession s = request.getSession();
+				s.setAttribute("currentUser", u);
 			}
 			
 			

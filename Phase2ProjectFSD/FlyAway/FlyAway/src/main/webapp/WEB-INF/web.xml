@@ -39,5 +39,35 @@
     <servlet-name>SaveFlightsServlet</servlet-name>
     <url-pattern>/SaveFlightsServlet</url-pattern>
   </servlet-mapping>
+ <servlet>
+    <description></description>
+    <display-name>SearchServlet</display-name>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.fly_away.servlets.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/SearchServlet</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>LogoutServlet</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.fly_away.servlets.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AvailableFlightsServlet</display-name>
+    <servlet-name>AvailableFlightsServlet</servlet-name>
+    <servlet-class>com.fly_away.servlets.AvailableFlightsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AvailableFlightsServlet</servlet-name>
+    <url-pattern>/AvailableFlightsServlet</url-pattern>
+  </servlet-mapping>
   
 </web-app>
