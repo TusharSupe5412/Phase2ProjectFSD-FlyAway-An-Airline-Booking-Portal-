@@ -45,7 +45,7 @@ body{
 
 
 				</li>
-				<li class="nav-item"><a class="nav-link" href="#"><span
+				<li class="nav-item"><a class="nav-link" href="SearchServlet"><span
 						class="fa fa-paper-plane-o"></span> Master list of airlines</a></li>
 				<li class="nav-item"><a class="nav-link" href="saveFlights.jsp"><span
 						class="fa fa-server"></span> Save Flight Details</a></li>
@@ -54,9 +54,7 @@ body{
 
 			</ul>
 			<ul class="navbar-nav mr-right">
-				<li class="nav-item"><a class="nav-link" href="#!"
-					data-toggle="modal" data-target="#profile-modal"><span
-						class="fa fa-user-circle"></span></a></li>
+				
 				<li class="nav-item"><a class="nav-link" href="LogoutServlet"><span
 						class="fa fa-user-plus"></span> Logout</a></li>
 			</ul>

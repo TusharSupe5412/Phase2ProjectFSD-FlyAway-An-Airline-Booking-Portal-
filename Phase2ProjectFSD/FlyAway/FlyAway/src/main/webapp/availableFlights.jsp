@@ -38,50 +38,59 @@ ArrayList<Flights> listOfFlights = (ArrayList<Flights>) request.getAttribute("al
 
 	<!-- Navbar starts here -->
 
-	<%@ include file="navbar.jsp" %>
+	<%@ include file="navbar.jsp"%>
 
 
 
 	<!-- Navbar ends here -->
 
-   <h1 style='text-align:center;color: green;'> Available Flight Details :</h1>
-   <div class="container">
-	<table class="table">
-		<thead>
-		
-			<tr class="table-success">
+	<h1 style='text-align: center; color: green;'>Available Flight
+		Details :</h1>
+	<div class="container">
+		<table class="table">
+			<thead>
+
+				<tr class="table-success">
+					<th scope="col">Flight id</th>
+					<th scope="col">Source</th>
+					<th scope="col">Destination</th>
+					<th scope="col">Date of journy</th>
+					<th scope="col">Airline</th>
+					<th scope="col">Ticket</th>
+
+
+
+				</tr>
+			</thead>
+
+
+
+			<%
+			for (Flights fl : listOfFlights) {
+			%>
+
+			<tr>
+				<td><%=fl.getFid()%></td>
+				<td><%=fl.getSource()%></td>
+				<td><%=fl.getDestination()%></td>
+				<td><%=fl.getFdate()%></td>
+				<td><%=fl.getAirline()%></td>
+				<td><%=fl.getTicket()%></td>
+
 				
-				<th scope="col">Source</th>
-				<th scope="col">Destination</th>
-				<th scope="col">Date of journy</th>
-				<th scope="col">Airline</th>
-				<th scope="col">Ticket</th>
 				
-			
+				<td>
+					<div>
+				<a href='BookingServlet?id=+<%=fl.getFid()%>+'>Book Now</a>
+					</div>
+				</td>
 			</tr>
-		</thead>
 
-
-
-		<%
-		for (Flights fl : listOfFlights) {
-		%>
-
-		<tr>
-			<td><%=fl.getSource()%></td>
-			<td><%=fl.getDestination()%></td>
-			<td><%=fl.getFdate()%></td>
-			<td><%=fl.getAirline()%></td>
-			<td><%=fl.getTicket()%></td>
-			<td><a href="booking.jsp" type="button" class="btn btn-primary">Book now</a></td>
-
-		</tr>
-
-		<%
-		}
-		%>
-	</table>
-</div>
+			<%
+			}
+			%>
+		</table>
+	</div>
 
 
 </body>

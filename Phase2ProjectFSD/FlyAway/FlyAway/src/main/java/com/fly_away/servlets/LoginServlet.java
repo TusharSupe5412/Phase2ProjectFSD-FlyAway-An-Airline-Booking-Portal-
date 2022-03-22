@@ -40,21 +40,20 @@ public class LoginServlet extends HttpServlet {
 			
 			
 		}else {
-//			HttpSession s = request.getSession();
-//			s.setAttribute("currentUser", u);
+
 			
 			if(u.getRole().equals("admin")) {
 			
 				RequestDispatcher rd=request.getRequestDispatcher("admin.jsp");  
 			    rd.forward(request, response);
-//				response.sendRedirect("admin.jsp");
+
 				HttpSession s = request.getSession();
 				s.setAttribute("currentUser", u);
 			}else {
 				
 				RequestDispatcher rd=request.getRequestDispatcher("user.jsp");  
 			    rd.forward(request, response);
-//				response.sendRedirect("user.jsp");
+
 				HttpSession s = request.getSession();
 				s.setAttribute("currentUser", u);
 			}

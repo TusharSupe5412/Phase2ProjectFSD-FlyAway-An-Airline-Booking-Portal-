@@ -103,7 +103,7 @@ public class FlightsDao {
 
 			while (set.next()) {
 				Flights f = new Flights();
-				
+				f.setFid(set.getInt(1));
 				f.setSource((set.getString(2)));
 				f.setDestination(set.getString(3));
 				f.setAirline(set.getString(4));
@@ -133,23 +133,33 @@ public Flights getFlightsByFid(int fid) {
 		
 		Flights flights = null;
 		
-		
+		String q = "Select * from Flights where fid=?";	
 		
 		
 		try {
-			String q = "Select * from Flights where fid=?";	
+			
 			PreparedStatement ps = this.con.prepareStatement(q);
 			ps.setInt(1, fid);
 			
 			ResultSet set = ps.executeQuery();
 			
-			while(set.next()) {
-				Flights f = new Flights();
-				f.setSource(set.getString(2));
-				f.setDestination(set.getString(3));
-				f.setAirline(set.getString(4));
-				f.setTicket(set.getString(5));
-				f.setFdate(set.getString(6));
+			if(set.next()) {
+//				Flights f = new Flights();
+//				
+//				f.setSource(set.getString(2));
+//				f.setDestination(set.getString(3));
+//				f.setAirline(set.getString(4));
+//				f.setTicket(set.getString(5));
+//				f.setFdate(set.getString(6));
+				
+				String source = set.getString("source");
+				String destination = set.getString("destination");
+				String airline = set.getString("airline");
+				String ticket = set.getString("ticket");
+				String fdate = set.getString("fdate");
+				
+				
+				flights = new Flights(source,destination,airline,ticket,fdate);
 		
 			}
 		} catch (Exception e) {

@@ -26,19 +26,19 @@ ArrayList<Flights> listOfFlights = (ArrayList<Flights>) request.getAttribute("fl
 </head>
 
 <style>
-/* body {
+body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	background-image: url('img/plane.jpg');
-} */
+	background-color:#008080 ;
+}
 </style>
 </head>
 <body>
 
 	<!-- Navbar starts here -->
 
-	<nav class="navbar navbar-expand-lg navbar-dark primary-background">
+	<nav class="navbar navbar-expand-lg navbar-dark primary-background ">
 		<a class="navbar-brand" href="index.jsp"><span
 			class="fa fa-plane"></span> FlyAway</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -55,9 +55,9 @@ ArrayList<Flights> listOfFlights = (ArrayList<Flights>) request.getAttribute("fl
 						class="sr-only">(current)</span></a></li>
 
 
-				</li>
+				
 				<li class="nav-item"><a class="nav-link" href="SearchServlet"><span
-						class="fa fa-paper-plane-o"></span> Master list of airlines</a></li>
+						class="fa fa-paper-plane-o"></span> Master list of Flights</a></li>
 				<li class="nav-item"><a class="nav-link" href="saveFlights.jsp"><span
 						class="fa fa-server"></span> Save Flight Details</a></li>
 				<li class="nav-item"><a class="nav-link" href="contactUs.jsp"><span
@@ -76,13 +76,14 @@ ArrayList<Flights> listOfFlights = (ArrayList<Flights>) request.getAttribute("fl
 
 	<!-- Navbar ends here -->
 
-   <h1 style='text-align:center;color: green;'>Flight Details :</h1>
-   <div class="container">
+   <h1 style='text-align:center;color: blue;'>All Flight Details :</h1>
+   <div class="container text-white">
 	<table class="table">
 		<thead>
 		
-			<tr class="table-success">
+			<tr class="table-dark">
 				
+				<th scope="col">Flight id</th>
 				<th scope="col">Source</th>
 				<th scope="col">Destination</th>
 				<th scope="col">Date of journy</th>
@@ -99,6 +100,7 @@ ArrayList<Flights> listOfFlights = (ArrayList<Flights>) request.getAttribute("fl
 		%>
 
 		<tr>
+			<td><%=fl.getFid()%></td>
 			<td><%=fl.getSource()%></td>
 			<td><%=fl.getDestination()%></td>
 			<td><%=fl.getFdate()%></td>
