@@ -48,7 +48,7 @@ body {
 
 	<!-- Banner ends here  -->
 
-	<!-- Registration form -->
+	<!--form -->
 
 	<main>
 		<div class="col-md-5 offset-md-3">

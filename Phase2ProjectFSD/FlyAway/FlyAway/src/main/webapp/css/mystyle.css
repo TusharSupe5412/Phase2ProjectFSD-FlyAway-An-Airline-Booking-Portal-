@@ -1,17 +1,13 @@
 @charset "ISO-8859-1";
 
-
-body{
-	
+body {
 	background-image: url("background.jpg");
-	
 }
 
-.primary-background{
-	background: #033E3E!important;
+.primary-background {
+	background: #033E3E !important;
 }
 
-.banner-background{
-	
-		clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 94%, 68% 91%, 31% 96%, 0 89%, 0 0);
-	}
+.banner-background {
+	clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 94%, 68% 91%, 31% 96%, 0 89%, 0 0);
+}

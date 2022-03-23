@@ -30,7 +30,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	background-color:#008080 ;
+	background-color: #008080;
 }
 </style>
 </head>
@@ -39,8 +39,8 @@ body {
 	<!-- Navbar starts here -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark primary-background ">
-		<a class="navbar-brand" href="index.jsp"><span
-			class="fa fa-plane"></span> FlyAway</a>
+		<a class="navbar-brand" href="index.jsp"><span class="fa fa-plane"></span>
+			FlyAway</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -55,7 +55,7 @@ body {
 						class="sr-only">(current)</span></a></li>
 
 
-				
+
 				<li class="nav-item"><a class="nav-link" href="SearchServlet"><span
 						class="fa fa-paper-plane-o"></span> Master list of Flights</a></li>
 				<li class="nav-item"><a class="nav-link" href="saveFlights.jsp"><span
@@ -65,7 +65,7 @@ body {
 
 			</ul>
 			<ul class="navbar-nav mr-right">
-				
+
 				<li class="nav-item"><a class="nav-link" href="LogoutServlet"><span
 						class="fa fa-user-plus"></span> Logout</a></li>
 			</ul>
@@ -76,44 +76,44 @@ body {
 
 	<!-- Navbar ends here -->
 
-   <h1 style='text-align:center;color: blue;'>All Flight Details :</h1>
-   <div class="container text-white">
-	<table class="table">
-		<thead>
-		
-			<tr class="table-dark">
-				
-				<th scope="col">Flight id</th>
-				<th scope="col">Source</th>
-				<th scope="col">Destination</th>
-				<th scope="col">Date of journy</th>
-				<th scope="col">Airline</th>
-				<th scope="col">Ticket</th>
-			
+	<h1 style='text-align: center; color: blue;'>All Flight Details :</h1>
+	<div class="container text-white">
+		<table class="table">
+			<thead>
+
+				<tr class="table-dark">
+
+					<th scope="col">Flight id</th>
+					<th scope="col">Source</th>
+					<th scope="col">Destination</th>
+					<th scope="col">Date of journey</th>
+					<th scope="col">Airline</th>
+					<th scope="col">Ticket</th>
+
+				</tr>
+			</thead>
+
+
+
+			<%
+			for (Flights fl : listOfFlights) {
+			%>
+
+			<tr>
+				<td><%=fl.getFid()%></td>
+				<td><%=fl.getSource()%></td>
+				<td><%=fl.getDestination()%></td>
+				<td><%=fl.getFdate()%></td>
+				<td><%=fl.getAirline()%></td>
+				<td><%=fl.getTicket()%></td>
+
 			</tr>
-		</thead>
 
-
-
-		<%
-		for (Flights fl : listOfFlights) {
-		%>
-
-		<tr>
-			<td><%=fl.getFid()%></td>
-			<td><%=fl.getSource()%></td>
-			<td><%=fl.getDestination()%></td>
-			<td><%=fl.getFdate()%></td>
-			<td><%=fl.getAirline()%></td>
-			<td><%=fl.getTicket()%></td>
-
-		</tr>
-
-		<%
-		}
-		%>
-	</table>
-</div>
+			<%
+			}
+			%>
+		</table>
+	</div>
 
 
 </body>

@@ -14,18 +14,18 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-body{
-						background-repeat: no-repeat;
-					    background-attachment: fixed;
-					    background-size: cover;
-						background-image: url('img/airlines.jpg');
+body {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: url('img/airlines.jpg');
 }
 }
 </style>
 </head>
 <body>
 
-<!-- Navbar starts here -->
+	<!-- Navbar starts here -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark primary-background">
 		<a class="navbar-brand" href="index.jsp"><span
@@ -54,7 +54,7 @@ body{
 
 			</ul>
 			<ul class="navbar-nav mr-right">
-				
+
 				<li class="nav-item"><a class="nav-link" href="LogoutServlet"><span
 						class="fa fa-user-plus"></span> Logout</a></li>
 			</ul>
@@ -96,19 +96,19 @@ body{
 								placeholder="Enter your destination here">
 
 						</div>
-						
+
 						<div class="form-group">
-							<label for="destination">Airline</label> <input
-								name="airline" type="text" class="form-control"
-								id="user_destination" aria-describedby="emailHelp"
+							<label for="destination">Airline</label> <input name="airline"
+								type="text" class="form-control" id="user_destination"
+								aria-describedby="emailHelp"
 								placeholder="Enter your Airline name here">
 
 						</div>
-						
+
 						<div class="form-group">
 							<label for="destination">Ticket prize</label> <input
-								name="ticket" type="number" class="form-control"
-								id="ticket" aria-describedby="emailHelp"
+								name="ticket" type="number" class="form-control" id="ticket"
+								aria-describedby="emailHelp"
 								placeholder="Enter your Ticket prize here">
 
 						</div>
@@ -126,7 +126,8 @@ body{
 						<br>
 
 						<div class="container text-center">
-							<button id="submit-btn" type="submit" class="btn btn-primary ">Save Details</button>
+							<button id="submit-btn" type="submit" class="btn btn-primary ">Save
+								Details</button>
 						</div>
 
 					</form>

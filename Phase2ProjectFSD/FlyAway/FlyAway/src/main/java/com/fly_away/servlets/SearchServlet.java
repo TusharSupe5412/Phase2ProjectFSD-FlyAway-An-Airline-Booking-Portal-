@@ -17,37 +17,31 @@ import com.fly_away.entities.Flights;
 import com.fly_away.entities.User;
 import com.fly_away.helper.ConnectionProvider;
 
-
-
 public class SearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		
+
 		FlightsDao dao = new FlightsDao(ConnectionProvider.getConnection());
-		
+
 		List<Flights> f = dao.getAllFlights();
-		
-		if(f.isEmpty()) {
+
+		if (f.isEmpty()) {
 
 			response.sendRedirect("index.jsp");
-			
-			
-		}else {
-			
-			request.setAttribute("flightsDetails",f);
-			RequestDispatcher rd=request.getRequestDispatcher("flightDetails.jsp");  
-		    rd.include(request, response); 
-			
-			
-			
-			
-		
+
+		} else {
+
+			request.setAttribute("flightsDetails", f);
+			RequestDispatcher rd = request.getRequestDispatcher("flightDetails.jsp");
+			rd.include(request, response);
+
 		}
-		
+
 	}
 
 }

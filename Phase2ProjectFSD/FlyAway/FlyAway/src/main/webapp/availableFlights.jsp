@@ -25,14 +25,6 @@ ArrayList<Flights> listOfFlights = (ArrayList<Flights>) request.getAttribute("al
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<style>
-/* body {
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-image: url('img/plane.jpg');
-} */
-</style>
 </head>
 <body>
 
@@ -54,7 +46,7 @@ ArrayList<Flights> listOfFlights = (ArrayList<Flights>) request.getAttribute("al
 					<th scope="col">Flight id</th>
 					<th scope="col">Source</th>
 					<th scope="col">Destination</th>
-					<th scope="col">Date of journy</th>
+					<th scope="col">Date of journey</th>
 					<th scope="col">Airline</th>
 					<th scope="col">Ticket</th>
 
@@ -77,11 +69,11 @@ ArrayList<Flights> listOfFlights = (ArrayList<Flights>) request.getAttribute("al
 				<td><%=fl.getAirline()%></td>
 				<td><%=fl.getTicket()%></td>
 
-				
-				
+
+
 				<td>
 					<div>
-				<a href='BookingServlet?id=+<%=fl.getFid()%>+'>Book Now</a>
+						<a href='BookingServlet?id=+<%=fl.getFid()%>+'>Book Now</a>
 					</div>
 				</td>
 			</tr>

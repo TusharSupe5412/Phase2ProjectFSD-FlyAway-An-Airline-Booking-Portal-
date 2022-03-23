@@ -23,14 +23,14 @@ public class BookingServlet extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		
-		int fid = Integer.parseInt(request.getParameter("id").trim()); 
-		
+
+		int fid = Integer.parseInt(request.getParameter("id").trim());
+
 		FlightsDao dao = new FlightsDao(ConnectionProvider.getConnection());
 
 		Flights f = dao.getFlightsByFid(fid);
 
-		if (f==null) {
+		if (f == null) {
 
 			response.sendRedirect("index.jsp");
 

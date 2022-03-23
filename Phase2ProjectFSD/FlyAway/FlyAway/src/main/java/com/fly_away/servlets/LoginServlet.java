@@ -24,47 +24,39 @@ public class LoginServlet extends HttpServlet {
 		response.setContentType("text/html");
 
 		PrintWriter out = response.getWriter();
-		
+
 //		login----->> fetch user name and password from request
-		
+
 		String userEmail = request.getParameter("email");
 		String userPassword = request.getParameter("password");
-		
-		UserDao dao= new UserDao(ConnectionProvider.getConnection());
-		
+
+		UserDao dao = new UserDao(ConnectionProvider.getConnection());
+
 		User u = dao.getUserByEmailAndPassword(userEmail, userPassword);
-		
-		if(u==null) {
+
+		if (u == null) {
 
 			response.sendRedirect("login.jsp");
-			
-			
-		}else {
 
-			
-			if(u.getRole().equals("admin")) {
-			
-				RequestDispatcher rd=request.getRequestDispatcher("admin.jsp");  
-			    rd.forward(request, response);
+		} else {
+
+			if (u.getRole().equals("admin")) {
+
+				RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
+				rd.forward(request, response);
 
 				HttpSession s = request.getSession();
 				s.setAttribute("currentUser", u);
-			}else {
-				
-				RequestDispatcher rd=request.getRequestDispatcher("user.jsp");  
-			    rd.forward(request, response);
+			} else {
+
+				RequestDispatcher rd = request.getRequestDispatcher("user.jsp");
+				rd.forward(request, response);
 
 				HttpSession s = request.getSession();
 				s.setAttribute("currentUser", u);
 			}
-			
-			
-			
-			
-			
+
 		}
 	}
 
-	}
-
-
+}

@@ -25,7 +25,7 @@ body {
 	background-size: cover;
 	background-image: url('img/booking.jpg');
 }
-</style>	
+</style>
 
 <body>
 
@@ -50,7 +50,7 @@ body {
 						class="sr-only">(current)</span></a></li>
 
 
-		
+
 				<li class="nav-item"><a class="nav-link" href="success.jsp"><span
 						class="fa fa-server"></span> Booking Details</a></li>
 				<li class="nav-item"><a class="nav-link" href="contactUs.jsp"><span

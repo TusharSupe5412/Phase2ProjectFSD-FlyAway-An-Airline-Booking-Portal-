@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ page import="com.fly_away.entities.*" %>
-	<%@ page import="com.fly_away.dao.*" %>
-	<%@ page import="com.fly_away.helper.*" %>
-	<%@ page import="com.fly_away.servlets.*" %>
-	<%@page import="java.sql.*"%>
+<%@ page import="com.fly_away.entities.*"%>
+<%@ page import="com.fly_away.dao.*"%>
+<%@ page import="com.fly_away.helper.*"%>
+<%@ page import="com.fly_away.servlets.*"%>
+<%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,8 +34,8 @@ body {
 	<!-- Navbar starts here -->
 
 	<nav class="navbar navbar-expand-lg navbar-dark primary-background">
-		<a class="navbar-brand" href="index.jsp"><span
-			class="fa fa-plane"></span> FlyAway</a>
+		<a class="navbar-brand" href="index.jsp"><span class="fa fa-plane"></span>
+			FlyAway</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -60,7 +60,7 @@ body {
 
 			</ul>
 			<ul class="navbar-nav mr-right">
-				
+
 				<li class="nav-item"><a class="nav-link" href="LogoutServlet"><span
 						class="fa fa-user-plus"></span> Logout</a></li>
 			</ul>

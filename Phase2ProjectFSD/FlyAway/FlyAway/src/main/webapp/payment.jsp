@@ -41,8 +41,8 @@
 
 
 				</li>
-				
-			
+
+
 				<li class="nav-item"><a class="nav-link" href="contactUs.jsp"><span
 						class="fa fa-address-card-o"></span> Contact us</a></li>
 
@@ -64,8 +64,8 @@
 
 
 
-	<h1 style='text-align: center; color: green;'>Your Ticket
-		Details :</h1>
+	<h1 style='text-align: center; color: green;'>Your Ticket Details
+		:</h1>
 	<div class="container">
 		<table class="table">
 			<thead>
@@ -101,9 +101,9 @@
 	</div>
 	<div class="container text-center ">
 		<a href="success.jsp" class="btn btn-info" role="button">Pay</a>
-		
+
 	</div>
-<%-- 	
+	<%-- 	
 	<%
 	
 	request.setAttribute("success", flights);

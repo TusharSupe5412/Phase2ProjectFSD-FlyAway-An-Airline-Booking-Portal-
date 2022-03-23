@@ -14,25 +14,21 @@ import java.io.PrintWriter;
 public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		
-		
+
 		HttpSession s = request.getSession();
-		
+
 		s.removeAttribute("currentUser");
-		
-		
-		RequestDispatcher rd=request.getRequestDispatcher("login.jsp");  
-	    rd.include(request, response); 
-	    
-	    out.println("<h1 style='text-align:center;color:green;margin-top: 10px;'> Successfully Logout...</h1>");
-		
-		
+
+		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+		rd.include(request, response);
+
+		out.println("<h1 style='text-align:center;color:green;margin-top: 10px;'> Successfully Logout...</h1>");
+
 	}
 
 }

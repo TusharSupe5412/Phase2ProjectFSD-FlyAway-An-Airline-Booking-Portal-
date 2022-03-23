@@ -1,7 +1,5 @@
 package com.fly_away.entities;
 
-import java.util.Date;
-
 public class Flights {
 
 	private int fid;
@@ -10,8 +8,7 @@ public class Flights {
 	private String airline;
 	private String ticket;
 	private String fdate;
-	
-	
+
 	public Flights(int fid, String source, String destination, String airline, String ticket, String fdate) {
 		super();
 		this.fid = fid;
@@ -22,7 +19,6 @@ public class Flights {
 		this.fdate = fdate;
 	}
 
-
 	public Flights(String source, String destination, String airline, String ticket, String fdate) {
 		super();
 		this.source = source;
@@ -32,26 +28,16 @@ public class Flights {
 		this.fdate = fdate;
 	}
 
-
 	public Flights() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
-	
-	
-							//	Getters and Setters
 
-
-	
-
-
-	
-
+	// Getters and Setters
 
 	public int getFid() {
 		return fid;
 	}
-
 
 	public void setFid(int fid) {
 		this.fid = fid;
@@ -65,48 +51,36 @@ public class Flights {
 		this.source = source;
 	}
 
-
 	public String getDestination() {
 		return destination;
 	}
-
 
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
 
-
 	public String getAirline() {
 		return airline;
 	}
-
 
 	public void setAirline(String airline) {
 		this.airline = airline;
 	}
 
-
 	public String getTicket() {
 		return ticket;
 	}
-
 
 	public void setTicket(String ticket) {
 		this.ticket = ticket;
 	}
 
-
 	public String getFdate() {
 		return fdate;
 	}
 
-
 	public void setFdate(String fdate) {
 		this.fdate = fdate;
 	}
-	
-	
-	
-	
-	
+
 }

@@ -94,7 +94,7 @@ public class FlightsDao {
 			String query = "Select * from Flights where source= ? and destination= ? and fdate= ?;";
 
 			PreparedStatement pstmt = con.prepareStatement(query);
-			
+
 			pstmt.setString(1, source);
 			pstmt.setString(2, destination);
 			pstmt.setString(3, date);
@@ -122,28 +122,23 @@ public class FlightsDao {
 		return listOfFlights;
 
 	}
-	
-	
-	
+
 //	    Get flight Details by fid
-	
-	
-	
-public Flights getFlightsByFid(int fid) {
-		
+
+	public Flights getFlightsByFid(int fid) {
+
 		Flights flights = null;
-		
-		String q = "Select * from Flights where fid=?";	
-		
-		
+
+		String q = "Select * from Flights where fid=?";
+
 		try {
-			
+
 			PreparedStatement ps = this.con.prepareStatement(q);
 			ps.setInt(1, fid);
-			
+
 			ResultSet set = ps.executeQuery();
-			
-			if(set.next()) {
+
+			if (set.next()) {
 //				Flights f = new Flights();
 //				
 //				f.setSource(set.getString(2));
@@ -151,21 +146,20 @@ public Flights getFlightsByFid(int fid) {
 //				f.setAirline(set.getString(4));
 //				f.setTicket(set.getString(5));
 //				f.setFdate(set.getString(6));
-				
+
 				String source = set.getString("source");
 				String destination = set.getString("destination");
 				String airline = set.getString("airline");
 				String ticket = set.getString("ticket");
 				String fdate = set.getString("fdate");
-				
-				
-				flights = new Flights(source,destination,airline,ticket,fdate);
-		
+
+				flights = new Flights(source, destination, airline, ticket, fdate);
+
 			}
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
 		}
 		return flights;
-}
+	}
 }

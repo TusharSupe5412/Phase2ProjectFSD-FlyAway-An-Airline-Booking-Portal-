@@ -74,7 +74,6 @@ public class UserDao {
 				user.setPassword(set.getString("password"));
 				user.setGender(set.getString("gender"));
 				user.setRole(set.getString("role"));
-				
 
 			}
 

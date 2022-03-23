@@ -41,8 +41,8 @@
 
 
 				</li>
-				
-			
+
+
 				<li class="nav-item"><a class="nav-link" href="contactUs.jsp"><span
 						class="fa fa-address-card-o"></span> Contact us</a></li>
 
@@ -64,9 +64,10 @@
 
 
 
-		
+
 	<div class="container text-center ">
-		<h1 style='text-align:center;color:green;margin-top: 10px;'> Payment Done</h1>
+		<h1 style='text-align: center; color: green; margin-top: 10px;'>
+			Payment Done</h1>
 	</div>
 </body>
 </html>

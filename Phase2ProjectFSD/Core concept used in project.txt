@@ -1,0 +1,26 @@
+Core concepts used in the projects as follows:
+
+1. Servlet/jsp
+
+2. Exception Handling
+
+3. MySQL database to store user data
+
+4.List data structure
+
+5. class
+
+6. methods
+
+7.Html
+
+8.Css
+
+9.Bootstrap 4
+
+10.conditionals and loops
+
+11.for each loop
+
+12.session management
+
